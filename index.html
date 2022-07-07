@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopee</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link href="./assets/font/fontawesome-free-6.1.1-web/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
     <body>
         <div class="app">
             <header class="header">
-                <div class="grid">
-                    <nav class="header__navbar">
+                <div class="grid wide">
+                    <nav class="header__navbar hide-on-mobile-tablet">
                         <ul class="header__navbar-list">
                             <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate">
                                 Vào cửa hàng trên ứng dụng Shopee
@@ -116,7 +118,10 @@
                     </nav>
                     <!-- Header with search -->
                     <div class="header-with-search">
-                        <div class="header__logo">
+                        <label for="mobile-search-checkbox" class="header__mobile-search">
+                            <i class="header__mobile-search-icon fas fa-search"></i>
+                        </label>
+                        <div class="header__logo hide-on-tablet">
                             <a href="/" class="header__logo-link">
                                 <svg viewBox="0 0 192 65" class="header__logo-img">
                                     <g fill-rule="evenodd">
@@ -127,6 +132,9 @@
                                 </svg>
                             </a>
                         </div>
+
+                        <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
+
                         <div class="header__search">
                             <div class="header__search-input-warp">
                                 <input type="text" class="header__search-input" placeholder="Tìm kiếm">
@@ -251,12 +259,25 @@
                         </div>
                     </div>
                 </div>
-            
+                <ul class="header__sort-bar">
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-link">Liên quan</a>
+                    </li>
+                    <li class="header__sort-item header__sort-item--active">
+                        <a href="" class="header__sort-link">Mới nhất</a>
+                    </li>
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-link">Bán chạy</a>
+                    </li>
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-link">Giá</a>
+                    </li>
+                </ul>
             </header>
             <div class="app__container">
-                <div class="grid">
-                    <div class="grid__row app__content">
-                        <div class="grid__column-2">
+                <div class="grid wide">
+                    <div class="row sm-gutter app__content">
+                        <div class="col l-2 m-0 c-0">
                             <nav class="category">
                                 <h3 class="caterory__heading">
                                     Danh mục
@@ -274,8 +295,8 @@
                                 </ul>
                             </nav>
                         </div>
-                        <div class="grid__column-10">
-                            <div class="home-filter">
+                        <div class="col l-10 m-12 c-12">
+                            <div class="home-filter hide-on-mobile-tablet">
                                 <span class="home-filter__label">Sắp xếp theo</span>
                                 <button class="home-filter__btn btn">Phổ biến</button>
                                 <button class="home-filter__btn btn btn--primary">Mới nhất</button>
@@ -311,10 +332,52 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <nav class="mobile-category">
+                                <ul class="mobile-category__list">
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
                             <div class="home-product">
-                                <div class="grid__row">
+                                <div class="row sm-gutter">
                                     <!-- Product item -->
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTvgmCbWNBOZZFNt5hCXjSOVuNC375QFQcicnefFWgzCSQfWPWzj2442MjBtdLBDLti4veStzPORhM&usqp=CAc);"></div>
                                             <div class="home-product-item__name">[Mã COSLUX06 giảm 120K]Son dưỡng môi Đông y The history of Whoo Gongjinhyang Mi Glow Lip Balm 3.3g</div>
@@ -350,7 +413,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTvgmCbWNBOZZFNt5hCXjSOVuNC375QFQcicnefFWgzCSQfWPWzj2442MjBtdLBDLti4veStzPORhM&usqp=CAc);"></div>
                                             <div class="home-product-item__name">[Mã COSLUX06 giảm 120K]Son dưỡng môi Đông y The history of Whoo Gongjinhyang Mi Glow Lip Balm 3.3g</div>
@@ -386,7 +449,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTvgmCbWNBOZZFNt5hCXjSOVuNC375QFQcicnefFWgzCSQfWPWzj2442MjBtdLBDLti4veStzPORhM&usqp=CAc);"></div>
                                             <div class="home-product-item__name">[Mã COSLUX06 giảm 120K]Son dưỡng môi Đông y The history of Whoo Gongjinhyang Mi Glow Lip Balm 3.3g</div>
@@ -422,7 +485,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTvgmCbWNBOZZFNt5hCXjSOVuNC375QFQcicnefFWgzCSQfWPWzj2442MjBtdLBDLti4veStzPORhM&usqp=CAc);"></div>
                                             <div class="home-product-item__name">[Mã COSLUX06 giảm 120K]Son dưỡng môi Đông y The history of Whoo Gongjinhyang Mi Glow Lip Balm 3.3g</div>
@@ -458,7 +521,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTvgmCbWNBOZZFNt5hCXjSOVuNC375QFQcicnefFWgzCSQfWPWzj2442MjBtdLBDLti4veStzPORhM&usqp=CAc);"></div>
                                             <div class="home-product-item__name">[Mã COSLUX06 giảm 120K]Son dưỡng môi Đông y The history of Whoo Gongjinhyang Mi Glow Lip Balm 3.3g</div>
@@ -494,7 +557,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTvgmCbWNBOZZFNt5hCXjSOVuNC375QFQcicnefFWgzCSQfWPWzj2442MjBtdLBDLti4veStzPORhM&usqp=CAc);"></div>
                                             <div class="home-product-item__name">[Mã COSLUX06 giảm 120K]Son dưỡng môi Đông y The history of Whoo Gongjinhyang Mi Glow Lip Balm 3.3g</div>
@@ -530,7 +593,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTvgmCbWNBOZZFNt5hCXjSOVuNC375QFQcicnefFWgzCSQfWPWzj2442MjBtdLBDLti4veStzPORhM&usqp=CAc);"></div>
                                             <div class="home-product-item__name">[Mã COSLUX06 giảm 120K]Son dưỡng môi Đông y The history of Whoo Gongjinhyang Mi Glow Lip Balm 3.3g</div>
@@ -566,7 +629,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTvgmCbWNBOZZFNt5hCXjSOVuNC375QFQcicnefFWgzCSQfWPWzj2442MjBtdLBDLti4veStzPORhM&usqp=CAc);"></div>
                                             <div class="home-product-item__name">[Mã COSLUX06 giảm 120K]Son dưỡng môi Đông y The history of Whoo Gongjinhyang Mi Glow Lip Balm 3.3g</div>
@@ -602,7 +665,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTvgmCbWNBOZZFNt5hCXjSOVuNC375QFQcicnefFWgzCSQfWPWzj2442MjBtdLBDLti4veStzPORhM&usqp=CAc);"></div>
                                             <div class="home-product-item__name">[Mã COSLUX06 giảm 120K]Son dưỡng môi Đông y The history of Whoo Gongjinhyang Mi Glow Lip Balm 3.3g</div>
@@ -638,7 +701,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="grid__column-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTvgmCbWNBOZZFNt5hCXjSOVuNC375QFQcicnefFWgzCSQfWPWzj2442MjBtdLBDLti4veStzPORhM&usqp=CAc);"></div>
                                             <div class="home-product-item__name">[Mã COSLUX06 giảm 120K]Son dưỡng môi Đông y The history of Whoo Gongjinhyang Mi Glow Lip Balm 3.3g</div>
@@ -714,9 +777,9 @@
                 </div>
             </div>
             <footer class="footer">
-                <div class="grid">
-                    <div class="grid__row">
-                        <div class="grid__column-2-4">
+                <div class="grid wide footer__content">
+                    <div class="row">
+                        <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__heading">Chăm sóc khách hàng</h3>
                             <ul class="footer-list">
                                 <li class="footer-item">
@@ -730,7 +793,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="grid__column-2-4">
+                        <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__heading">Giới thiệu</h3>
                             <ul class="footer-list">
                                 <li class="footer-item">
@@ -744,7 +807,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="grid__column-2-4">
+                        <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__heading">Danh mục</h3>
                             <ul class="footer-list">
                                 <li class="footer-item">
@@ -758,7 +821,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="grid__column-2-4">
+                        <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__heading">Theo dõi</h3>
                             <ul class="footer-list">
                                 <li class="footer-item">
@@ -781,7 +844,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="grid__column-2-4">
+                        <div class="col l-2-4 m-8 c-12">
                             <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
                             <div class="footer__download">
                                 <img src="/assets/img/qr_code.png" alt="Download qr" class="footer__download-qr">
@@ -798,7 +861,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="footer__bottom">
+                <!-- <div class="footer__bottom">
                     <ul class="footer-Beside-list">
                         <li class="footer-Beside__item footer-Beside__item--separate">
                             <a href="" class="footer-Beside-list__link">Chính sách bảo mật</a>
@@ -813,10 +876,28 @@
                             <a href="" class="footer-Beside-list__link">chình sách trả hàng và hoàn tiền</a>
                         </li>
                     </ul>
-                    <div class="grid">
+                    <div class="grid wide">
                         <p class="footer__text"> © 2022 . Tất cả các quyền được bảo lưu.</p>
                     </div>
+                </div> -->
+                <div class="grid wide footer__os">
+                    <div class="row">
+                        <div class="col l-3 m-3 c-12 footer-Beside__item footer-Beside__item--separate">
+                            <a href="#" class="footer-Beside-list__link ">Chính sách bảo mật</a>
+                        </div>
+                        <div class="col l-3 m-3 c-12 footer-Beside__item footer-Beside__item--separate">
+                            <a href="#" class="footer-Beside-list__link ">Quy chế hoạt đông</a>
+                        </div>
+                        <div class="col l-3 m-3 c-12 footer-Beside__item footer-Beside__item--separate">
+                            <a href="#" class="footer-Beside-list__link ">Chính sách vận chuyển</a>
+                        </div>
+                        <div class="col l-3 m-3 c-12 footer-Beside__item ">
+                            <a href="#" class="footer-Beside-list__link ">chình sách trả hàng và hoàn tiền</a>
+                        </div>
+                    </div>
+                    
                 </div>
+                <p class="footer__text"> © 2022 . Tất cả các quyền được bảo lưu.</p>
             </footer>
         </div>
         <!-- Modal layout -->
